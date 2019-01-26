@@ -34,21 +34,15 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+
+
         if(!pause && !playerIsDead)
         {
-            //Game Play
-            drivingController.driving();
-            //if (levelManager.getCurrentSceneNumber() == 3)
-            //{
-
-            //}
+            if (levelManager.getCurrentSceneNumber() == 3)
+            {
+                drivingController.driving();
+            }
         }
-    }
-
-    public void gameStartDelay()
-    {
-        pause = true;
-        //PlayAnimation
     }
 
     public void playerDead()
@@ -56,8 +50,14 @@ public class GameController : MonoBehaviour
         //Show Player dead Infos
 
         Debug.Log("Player Dead!");
+        pause = true;
         gameStartDelay();
-        //levelManager.loadStartScene();
+        levelManager.loadStartScene();
+    }
+
+    IEnumerator gameStartDelay()
+    {
+        yield return new WaitForSeconds(3);
     }
 
 }

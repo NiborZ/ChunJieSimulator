@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public string[] sceneNames;
+    public List<GameObject> sceneList;
 
     private int currentSceneNum;
+
+    private void Start()
+    {
+        currentSceneNum = 0;
+    }
 
     public int getCurrentSceneNumber()
     {
@@ -17,11 +22,11 @@ public class LevelManager : MonoBehaviour
     public void loadNextScene()
     {
         currentSceneNum++;
-        SceneManager.LoadScene(sceneNames[currentSceneNum]);
+        SceneManager.LoadScene(sceneList[currentSceneNum].name);
     }
     public void loadStartScene()
     {
         currentSceneNum = 0;
-        SceneManager.LoadScene(sceneNames[currentSceneNum]);
+        SceneManager.LoadScene(sceneList[currentSceneNum].name);
     }
 }
