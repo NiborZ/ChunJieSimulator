@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameController gameController;
+    public string playerName;
+    public string playerCurrentState;
+
+    private int playerMoney;
+
+    public void gainMoney(int gainedMoney)
     {
-        
+        playerMoney += gainedMoney;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void loseMoney(int lostMoney)
     {
-        
+        if((playerMoney - lostMoney) <= 0)
+        {
+            playerMoney = 0;
+            gameController.playerDead();
+        }
+        else
+        {
+            playerMoney -= lostMoney;
+        }
     }
+
 }

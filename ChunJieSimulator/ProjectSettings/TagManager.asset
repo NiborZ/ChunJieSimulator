@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RedZone
+  - YellowZone
+  - DisappearZone
+  - CarSpawingPoint
+  - Road
   layers:
   - Default
   - TransparentFX
