@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class CrowController : MonoBehaviour
 {
+    public Sprite smile;
     Rigidbody2D rigid;
     RaycastHit2D[] hits = new RaycastHit2D[8];
     internal bool controllable = true;
     private void Awake() {
         rigid = GetComponent<Rigidbody2D>();
     }
-
+    public void Smile() {
+        transform.Find("img").localScale = new Vector3(1, 1, 1);
+        GetComponentInChildren<SpriteRenderer>().sprite = smile;
+    }
     void Update() {
         if (controllable) {
             Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -26,6 +30,9 @@ public class CrowController : MonoBehaviour
                         dir.x *= 0.1f;
                         dir = dir.normalized;
                         hits[i].collider.GetComponentInParent<Rigidbody2D>().AddForce(dir * 300);
+                        if (hits[i].collider.GetComponentInParent<CrowMan>()) {
+                            hits[i].collider.GetComponentInParent<CrowMan>().Hit();
+                        }
                     }
                 }
             }

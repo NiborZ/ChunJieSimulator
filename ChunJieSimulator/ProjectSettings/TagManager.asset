@@ -9,6 +9,7 @@ TagManager:
   - DisappearZone
   - CarSpawingPoint
   - Road
+  - Dialog
   layers:
   - Default
   - TransparentFX

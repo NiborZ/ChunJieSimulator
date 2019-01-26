@@ -60,7 +60,7 @@ public class UITicket : MonoBehaviour
     internal void ShotDown() {
         trShutDown.gameObject.SetActive(true);
         Sequence se = DOTween.Sequence();
-        se.AppendInterval(2f);
+        se.AppendInterval(3f);
         se.AppendCallback(()=> 
         {
             trShutDown.Find("tips").gameObject.SetActive(false);
@@ -112,6 +112,7 @@ public class UITicket : MonoBehaviour
     public void RefreshVilication() {
         ShowWaiting(() => {
             pnValidfication.gameObject.SetActive(true);
+            pnValidfication.Refresh();
         });
     }
     private void Update() {
