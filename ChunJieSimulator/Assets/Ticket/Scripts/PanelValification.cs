@@ -61,7 +61,9 @@ public class PanelValification : MonoBehaviour
         if (valid) {
             GetComponentInParent<UITicket>().ShowSuccess();
         } else {
-            Refresh();
+            GetComponentInParent<UITicket>().ShowWaiting(() => {
+                Refresh();
+            });
         }
     }
 

@@ -34,7 +34,7 @@ public class Ticket : MonoBehaviour
             SetHardSeat(0);
             SetNoSeat(Random.Range(0, 10) < 6 ? 1 : 0);
             if (noSeat == 1) {
-                if ((buyTime > 1 && Random.Range(0, 5) < buyTime) || buyTime > 4) {
+                if ((buyTime > 1 && Random.Range(0, 5) < buyTime) || buyTime > 3) {
                     hasTickey = true;
                 } else {
                     hasTickey = false;
@@ -70,6 +70,7 @@ public class Ticket : MonoBehaviour
                 } else {
                     buyTime++;
                     GetComponentInParent<UITicket>().ShowSoldOut();
+                    SetNoSeat(0);
                 }
             }
         }

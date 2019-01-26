@@ -11,7 +11,7 @@ public class TicketScrollRect : ScrollRect
     /// </summary>
     public override void OnEndDrag(PointerEventData eventData) {
         base.OnEndDrag(eventData);
-        if (content.anchoredPosition.y < 75) {
+        if (content.anchoredPosition.y < -75) {
             GetComponentInParent<UITicket>().RefreshTickets();
         }
     }
