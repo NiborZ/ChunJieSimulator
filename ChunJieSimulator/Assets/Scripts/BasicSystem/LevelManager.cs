@@ -71,4 +71,9 @@ public class LevelManager
         currentSceneNum = 0;
         SceneManager.LoadScene(scenes[currentSceneNum]);
     }
+
+
+    public void gameFail() {
+
+    }
 }

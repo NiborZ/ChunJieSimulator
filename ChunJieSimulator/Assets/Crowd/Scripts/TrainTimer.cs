@@ -27,7 +27,7 @@ public class TrainTimer : MonoBehaviour
 
     public void OnTimeOut() {
         Debug.Log("Time Out");
-
+        LevelManager.Instance.gameFail();
     }
 
     public void Stop() {

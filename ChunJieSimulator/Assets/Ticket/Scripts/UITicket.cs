@@ -65,6 +65,10 @@ public class UITicket : MonoBehaviour
         {
             trShutDown.Find("tips").gameObject.SetActive(false);
         });
+        se.AppendInterval(1f);
+        se.AppendCallback(() => {
+            LevelManager.Instance.gameFail();
+        });
     }
 
     internal void EndWaiting() {

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5026405281154396200}
   - component: {fileID: 3079036068081694469}
+  - component: {fileID: 5127097236963638550}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -47,6 +48,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 1964972370001910204}
   effectSource: {fileID: 8644250096027168586}
+--- !u!81 &5127097236963638550
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173696956479239100}
+  m_Enabled: 1
 --- !u!1 &1833040430978895352
 GameObject:
   m_ObjectHideFlags: 0
