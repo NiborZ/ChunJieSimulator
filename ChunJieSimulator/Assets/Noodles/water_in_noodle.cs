@@ -61,8 +61,7 @@ public class water_in_noodle : MonoBehaviour
                     HP--;
                     if (HP == 0)
                     {
-                        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
-                        SceneManager.LoadScene("fail_noodle", LoadSceneMode.Single);
+                        LevelManager.Instance.loadScene("Sx_GameOver", false);
                     }
                     break;
                 }

@@ -20,7 +20,7 @@ public class LoadScene_OnClick : MonoBehaviour
         //SceneManager.UnloadSceneAsync(active_scene.name);
         if (btn.name == "Button (1)")
         {
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            LevelManager.Instance.loadNextScene();
         }
         if (btn.name == "Button (2)")
         {
