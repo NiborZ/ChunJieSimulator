@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class water_in_noodle : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class water_in_noodle : MonoBehaviour
     private int protected_mode = 0;
     private float clock = 0.0f;
     private float water_clock = 0.0f;
+    private float survive_clock = 0.0f;
     public GameObject splashed_water;
     public float water_lifespan = 0.4f;
     // Start is called before the first frame update
@@ -22,6 +24,7 @@ public class water_in_noodle : MonoBehaviour
     void Update()
     {
         water_clock += Time.deltaTime;
+        survive_clock += Time.deltaTime;
         if (water_clock >= water_lifespan)
         {
             GameObject.Find("Splashed_water").GetComponent<Renderer>().enabled = false;
@@ -55,7 +58,12 @@ public class water_in_noodle : MonoBehaviour
                     //splashed_water.GetComponent<Renderer>().enabled = false;
                     child.gameObject.GetComponent<Renderer>().enabled = true;
                     protected_mode = 1;
-
+                    HP--;
+                    if (HP == 0)
+                    {
+                        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+                        SceneManager.LoadScene("fail_noodle", LoadSceneMode.Single);
+                    }
                     break;
                 }
             }
