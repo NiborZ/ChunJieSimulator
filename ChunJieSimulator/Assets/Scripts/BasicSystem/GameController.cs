@@ -26,16 +26,12 @@ public class GameController : MonoBehaviour
         return this.pause;
     }
 
-    
+
     void Start()
     {
         pause = false;
     }
 
-    void Update()
-    {
-    
-    }
 
     public void playerDead()
     {
