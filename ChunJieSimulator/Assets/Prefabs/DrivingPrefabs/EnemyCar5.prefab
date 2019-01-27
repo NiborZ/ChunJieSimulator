@@ -95,9 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f137f521a2b07461a805157997006ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eSpeed: 0.18
+  eSpeed: 0.05
   enemyType: 5
-  drivingController: {fileID: 0}
 --- !u!61 &3285394314901403251
 BoxCollider2D:
   m_ObjectHideFlags: 0

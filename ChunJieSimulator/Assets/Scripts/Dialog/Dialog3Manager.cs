@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Dialog3Manager : MonoBehaviour
 {
     public Text text1;
-    public LevelManager levelManager;
     void Start()
     {
         StartCoroutine(textPresenter());
@@ -18,6 +17,6 @@ public class Dialog3Manager : MonoBehaviour
         yield return new WaitForSeconds(3);
         text1.text = "看到面前茫茫人海，我不禁皱起了眉头。";
         yield return new WaitForSeconds(3);
-        //levelManager.loadNextScene();
+        LevelManager.Instance.loadNextScene();
     }
 }

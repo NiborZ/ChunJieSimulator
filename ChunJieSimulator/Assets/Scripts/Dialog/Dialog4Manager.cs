@@ -39,6 +39,6 @@ public class Dialog4Manager : MonoBehaviour
     {
         Debug.Log("Dialog Finished");
         Destroy(dialog2Obj);
-
+        LevelManager.Instance.loadNextScene();
     }
 }

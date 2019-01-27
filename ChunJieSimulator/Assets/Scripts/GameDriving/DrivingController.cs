@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DrivingController : MonoBehaviour
 {
-    public GameController gameController;
     public PlayerDrivingMovement playerDrivingMovement;
     public PlayerDrivingAcceleration playerDrivingAcceleration;
     public PlayerHealthShowing playerHealthShowing;
@@ -128,8 +127,7 @@ public class DrivingController : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-
-            gameController.playerDead();
+            LevelManager.Instance.loadScene("Sx_GameOver", false);
         }
         else
         {
@@ -146,6 +144,10 @@ public class DrivingController : MonoBehaviour
 
     IEnumerator gameFinish()
     {
+        foreach (GameObject obj in spawnedCars)
+        {
+            Destroy(obj);
+        }
         playerCarStopped = true;
         roadAnimator.SetBool("QuickMoveEnd", true);
         roadAnimator.SetBool("QuickMoveStart", false);
@@ -156,6 +158,7 @@ public class DrivingController : MonoBehaviour
         roadAnimator.SetBool("SlowMoveEnd", true);
         roadAnimator.SetBool("SlowMoveStart", false);
         yield return new WaitForSeconds(1);
+        LevelManager.Instance.loadNextScene();
     }
 
 }
