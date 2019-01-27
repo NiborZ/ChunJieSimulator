@@ -8,4 +8,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/S2_GameScrambleTicket.unity
     guid: ab8a0824bf43a45f0b754b411c6362db
+  - enabled: 1
+    path: Assets/Scenes/S4_GameDriving.unity
+    guid: 990aecec63e8d45abbaaa0501810f840
+  - enabled: 1
+    path: Assets/Scenes/S0_MainMenu.unity
+    guid: 7575a33d36e404372badfd897624acb8
+  - enabled: 1
+    path: Assets/Scenes/S1_Dialog1.unity
+    guid: c8ddf4a27993944e5a896f9d9de463b6
+  - enabled: 1
+    path: Assets/Scenes/S3_Dialog1Good.unity
+    guid: f80af3ad32ba64ad49b9884a5ff271c4
+  - enabled: 1
+    path: Assets/Scenes/S3_DialogBad.unity
+    guid: ca1c023d7babb425db17725da98301f7
+  - enabled: 1
+    path: Assets/Scenes/S5_Dialog2.unity
+    guid: 4826e6412829047349ddbcb02750a979
+  - enabled: 1
+    path: Assets/Scenes/S6_Dialog3.unity
+    guid: 1cb98be0b53ab4a4c8896265a3014b22
+  - enabled: 1
+    path: Assets/Scenes/S7_GameCrowd.unity
+    guid: 76d03ac0b49092f4ea2e6aa202161640
+  - enabled: 1
+    path: Assets/Scenes/S8_Dialog4.unity
+    guid: de5f30de4743d41ceb94e5cbaf53335a
+  - enabled: 1
+    path: Assets/Scenes/S9_GameMakeInstantNoodle.unity
+    guid: 1d08d72f8ce79498d92ee73709e2f465
+  - enabled: 1
+    path: Assets/Scenes/S10_Dialog5.unity
+    guid: f112661638bc845e88830c6d6504cd98
   m_configObjects: {}

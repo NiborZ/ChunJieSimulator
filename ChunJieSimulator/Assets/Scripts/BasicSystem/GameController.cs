@@ -38,14 +38,7 @@ public class GameController : MonoBehaviour
         //Show Player dead Infos
 
         Debug.Log("Player Dead!");
-        pause = true;
-        gameStartDelay();
-        levelManager.loadStartScene();
     }
 
-    IEnumerator gameStartDelay()
-    {
-        yield return new WaitForSeconds(3);
-    }
 
 }

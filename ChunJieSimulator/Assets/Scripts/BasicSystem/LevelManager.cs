@@ -13,7 +13,7 @@ public class LevelManager
         {
             if (_Instance == null)
             {
-                return _Instance;
+                _Instance = new LevelManager();
             }
             return _Instance;
         }
@@ -32,35 +32,34 @@ public class LevelManager
         "S7_GameCrowd",
         "S8_Dialog4",
         "S9_GameMakeInstantNoodle",
-        "S10_Dialog5"
+        "S10_Dialog5",
+        "Sx_GameOver"
     };
 
     private int currentSceneNum;
-
-    private void Start()
-    {
-        currentSceneNum = 0;
-    }
 
     public int getCurrentSceneNumber()
     {
         return currentSceneNum;
     }
 
-    public void loadScene(string targetScene)
+    public void loadScene(string targetScene, bool changeIndex = true)
     {
-        for (int i = 0; i < scenes.Length; i++)
+        if (changeIndex)
         {
-            if (targetScene == scenes[i])
+            for (int i = 0; i < scenes.Length; i++)
             {
-                currentSceneNum = i;
+                if (targetScene == scenes[i])
+                {
+                    currentSceneNum = i;
+                }
             }
         }
         SceneManager.LoadScene(targetScene);
     }
     public void loadNextScene()
     {
-        currentSceneNum++;
+        currentSceneNum = Mathf.Min(currentSceneNum+1, scenes.Length - 1);
         SceneManager.LoadScene(scenes[currentSceneNum]);
     }
     public void restart()

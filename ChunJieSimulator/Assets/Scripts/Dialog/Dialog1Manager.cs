@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Dialog1Manager : MonoBehaviour
 {
     public Text text1;
-    public LevelManager levelManager;
     void Start()
     {
         StartCoroutine(textPresenter());
@@ -20,6 +19,6 @@ public class Dialog1Manager : MonoBehaviour
         yield return new WaitForSeconds(3);
         text1.text = "过年回家的车票还没买";
         yield return new WaitForSeconds(3);
-        //levelManager.loadNextScene();
+        LevelManager.Instance.loadNextScene();
     }
 }
