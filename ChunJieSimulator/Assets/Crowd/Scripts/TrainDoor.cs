@@ -44,6 +44,7 @@ public class TrainDoor : MonoBehaviour
                     if (enterPassenger.GetComponent<CrowController>()) {
                         GameObject.Find("Canvas").GetComponentInChildren<TrainTimer>().Stop();
                         Debug.Log("Success:" + (Time.time - startTime));
+                        LevelManager.Instance.loadNextScene();
                     }
                     Destroy(enterPassenger);
                 });
