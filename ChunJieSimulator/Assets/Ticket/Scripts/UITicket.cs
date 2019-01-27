@@ -63,6 +63,7 @@ public class UITicket : MonoBehaviour
         se.AppendInterval(3f);
         se.AppendCallback(()=> 
         {
+            trShutDown.Find("button").gameObject.SetActive(false);
             trShutDown.Find("tips").gameObject.SetActive(false);
         });
         se.AppendInterval(1f);
