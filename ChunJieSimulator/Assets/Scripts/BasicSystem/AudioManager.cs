@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private AudioManager _Instance;
-    public AudioManager Instance {
+    private static AudioManager _Instance;
+    public static AudioManager Instance {
         get {
             if (_Instance == null) {
                 GameObject go = Instantiate<GameObject>(Resources.Load<GameObject>("AudioManager"));
@@ -22,8 +22,8 @@ public class AudioManager : MonoBehaviour
         bgmSource.clip = clip;
         bgmSource.Play();
     }
-    public void PlayEffect(AudioClip clip) {
-        effectSource.PlayOneShot(clip);
+    public void PlayEffect(AudioClip clip, float volumeScale) {
+        effectSource.PlayOneShot(clip, volumeScale);
     }
 
 }

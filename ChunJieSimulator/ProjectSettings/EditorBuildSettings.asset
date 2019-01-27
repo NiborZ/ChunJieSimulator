@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/S10_Dialog5.unity
     guid: f112661638bc845e88830c6d6504cd98
+  - enabled: 1
+    path: Assets/Scenes/Sx_GameOver.unity
+    guid: 6eb52b888f6cf4857931f2b123ed631c
   m_configObjects: {}

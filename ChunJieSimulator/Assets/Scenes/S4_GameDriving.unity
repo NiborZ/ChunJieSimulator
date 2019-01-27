@@ -384,6 +384,8 @@ MonoBehaviour:
   playerCarStopped: 0
   playTime: 10
   usedSpawner: 0
+  boomClip: {fileID: 8300000, guid: 3c2a9a672f3024f6da49241c1d26d281, type: 3}
+  engineClip: {fileID: 8300000, guid: 212c6dc3b3807417e845104c975a6e64, type: 3}
 --- !u!4 &543353871
 Transform:
   m_ObjectHideFlags: 0
