@@ -34,15 +34,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-
-
-        if(!pause && !playerIsDead)
-        {
-            if (levelManager.getCurrentSceneNumber() == 3)
-            {
-                drivingController.driving();
-            }
-        }
+    
     }
 
     public void playerDead()

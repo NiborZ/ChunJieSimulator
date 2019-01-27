@@ -41,6 +41,11 @@ public class DrivingController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        driving();
+    }
+
     public void playerLoseHealth()
     {
         enemyMoveForward();
