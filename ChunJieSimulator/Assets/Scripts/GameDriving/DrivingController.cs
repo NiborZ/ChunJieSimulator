@@ -52,7 +52,7 @@ public class DrivingController : MonoBehaviour
     {
         enemyMoveForward();
         StartCoroutine(adjustRoadSpeed());
-        AudioManager.Instance.PlayEffect(boomClip);
+        AudioManager.Instance.PlayEffect(boomClip, 10f);
     }
 
     private void enemyMoveForward()
@@ -78,6 +78,7 @@ public class DrivingController : MonoBehaviour
                 playerDrivingMovement.controlPlayerMovement();
                 spawnEnemy();
                 playTimeCounter += Time.deltaTime;
+                AudioManager.Instance.PlayBgm(engineClip);
             }
         }
     }
@@ -117,6 +118,7 @@ public class DrivingController : MonoBehaviour
     IEnumerator adjustRoadSpeed()
     {
         playerHealth -= 1;
+        AudioManager.Instance.bgmSource.volume = 1;
         crushAnimator.SetBool("CarCrush", true);
         playerHealthShowing.reduceHealth(playerHealth);
         playerCarStopped = true;
@@ -143,6 +145,7 @@ public class DrivingController : MonoBehaviour
             roadAnimator.SetBool("QuickMoveEnd", false);
             playerDrivingAcceleration.resetPosition();
             playerCarStopped = false;
+            AudioManager.Instance.bgmSource.volume = 100;
         }
     }
 

@@ -22,8 +22,8 @@ public class AudioManager : MonoBehaviour
         bgmSource.clip = clip;
         bgmSource.Play();
     }
-    public void PlayEffect(AudioClip clip) {
-        effectSource.PlayOneShot(clip);
+    public void PlayEffect(AudioClip clip, float volumeScale) {
+        effectSource.PlayOneShot(clip, volumeScale);
     }
 
 }
