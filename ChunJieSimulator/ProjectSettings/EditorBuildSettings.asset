@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Noodles/Scenes/Test_Main_menu.unity
+    guid: af1c807b679d448cb984df3e2c9b02cc
+  - enabled: 1
     path: Assets/Scenes/S2_GameScrambleTicket.unity
     guid: ab8a0824bf43a45f0b754b411c6362db
   - enabled: 1
@@ -36,12 +39,15 @@ EditorBuildSettings:
     path: Assets/Scenes/S8_Dialog4.unity
     guid: de5f30de4743d41ceb94e5cbaf53335a
   - enabled: 1
-    path: Assets/Scenes/S9_GameMakeInstantNoodle.unity
-    guid: 1d08d72f8ce79498d92ee73709e2f465
-  - enabled: 1
     path: Assets/Scenes/S10_Dialog5.unity
     guid: f112661638bc845e88830c6d6504cd98
   - enabled: 1
     path: Assets/Scenes/Sx_GameOver.unity
     guid: 6eb52b888f6cf4857931f2b123ed631c
+  - enabled: 1
+    path: Assets/Noodles/Scenes/S9_GameMakeInstantNoodle.unity
+    guid: be20513c78c744466ba905d09a5029d8
+  - enabled: 1
+    path: Assets/Noodles/Scenes/vic_noodle.unity
+    guid: efae6cc4fff2a4148937d68f950689c8
   m_configObjects: {}

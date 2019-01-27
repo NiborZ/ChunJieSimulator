@@ -15,7 +15,7 @@ public class DrivingController : MonoBehaviour
     private Animator roadAnimator;
     public int playerHealth;
     public bool playerCarStopped = false;
-    public float playTime = 30f;
+    public float playTime = 20f;
     private bool enemySpawned = false;
     private float spawingTime = 1.8f;
     private float secondsCounter = 0f;

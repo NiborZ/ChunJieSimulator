@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public AudioClip[] bgms;
+    Dictionary<string, AudioClip> _scene2Bgm;
+    Dictionary<string, AudioClip> scene2Bgm {
+        get {
+            if (_scene2Bgm == null) {
+                _scene2Bgm = new Dictionary<string, AudioClip>()
+                {
+                    { "S4_GameDriving", bgms[0] },
+                    { "Test_Main_menu", bgms[1] },
+                    { "S10_Dialog5", bgms[2] },
+                };
+            }
+            return _scene2Bgm;
+        }
+    }
     private static AudioManager _Instance;
     public static AudioManager Instance {
         get {
@@ -20,10 +35,19 @@ public class AudioManager : MonoBehaviour
     public AudioSource effectSource;
     public void PlayBgm(AudioClip clip) {
         bgmSource.clip = clip;
-        bgmSource.Play();
+        if (clip != null) {
+            bgmSource.Play();
+        } else {
+            bgmSource.Pause();
+        }
     }
     public void PlayEffect(AudioClip clip, float volumeScale) {
         effectSource.PlayOneShot(clip, volumeScale);
     }
 
+    internal void PlaySceneBgm(string sceneName) {
+        if (scene2Bgm.ContainsKey(sceneName)) {
+            PlayBgm(scene2Bgm[sceneName]);
+        }
+    }
 }

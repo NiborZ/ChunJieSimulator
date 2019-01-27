@@ -29,6 +29,7 @@ public class Dialog3Manager : MonoBehaviour
     }
 
     public void dialogFinished() {
+        LevelManager.Instance.loadNextScene();
         Destroy(dialog);
         //Instantiate(player);
     }

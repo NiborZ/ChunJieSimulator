@@ -382,7 +382,7 @@ MonoBehaviour:
   crushAnimator: {fileID: 2003903952}
   playerHealth: 0
   playerCarStopped: 0
-  playTime: 10
+  playTime: 20
   usedSpawner: 0
   boomClip: {fileID: 8300000, guid: 3c2a9a672f3024f6da49241c1d26d281, type: 3}
   engineClip: {fileID: 8300000, guid: 212c6dc3b3807417e845104c975a6e64, type: 3}
@@ -1366,6 +1366,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4510475783155024978, guid: efb22bb6ad08c453c84d03dfe3b0f5ca,
+        type: 3}
+      propertyPath: drivingController
+      value: 
+      objectReference: {fileID: 543353870}
     - target: {fileID: 4510475783155024980, guid: efb22bb6ad08c453c84d03dfe3b0f5ca,
         type: 3}
       propertyPath: m_Sprite
@@ -1377,11 +1382,6 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4510475783155024978, guid: efb22bb6ad08c453c84d03dfe3b0f5ca,
-        type: 3}
-      propertyPath: drivingController
-      value: 
-      objectReference: {fileID: 543353870}
     - target: {fileID: 887417303, guid: efb22bb6ad08c453c84d03dfe3b0f5ca, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -1470,6 +1470,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Needle
       objectReference: {fileID: 0}
+    - target: {fileID: 9095192822963892729, guid: 8e363961f4fce484299f026b96d018b2,
+        type: 3}
+      propertyPath: drivingController
+      value: 
+      objectReference: {fileID: 543353870}
     - target: {fileID: 9095192822963892728, guid: 8e363961f4fce484299f026b96d018b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1525,11 +1530,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9095192822963892729, guid: 8e363961f4fce484299f026b96d018b2,
-        type: 3}
-      propertyPath: drivingController
-      value: 
-      objectReference: {fileID: 543353870}
     - target: {fileID: 344542861, guid: 8e363961f4fce484299f026b96d018b2, type: 3}
       propertyPath: m_Enabled
       value: 1

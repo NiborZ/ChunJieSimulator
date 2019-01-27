@@ -60,6 +60,7 @@ public class LevelManager
     public void loadNextScene()
     {
         currentSceneNum = Mathf.Min(currentSceneNum+1, scenes.Length - 1);
+        AudioManager.Instance.PlaySceneBgm(scenes[currentSceneNum]);
         SceneManager.LoadScene(scenes[currentSceneNum]);
     }
     public void restart()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class Loader : MonoBehaviour
     void Start()
     {
         //LevelManager.Instance.loadNextScene();
+        AudioManager.Instance.PlaySceneBgm(SceneManager.GetActiveScene().name);
     }
 
     // Update is called once per frame
