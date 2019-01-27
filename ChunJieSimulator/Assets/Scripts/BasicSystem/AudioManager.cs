@@ -11,7 +11,6 @@ public class AudioManager : MonoBehaviour
             if (_scene2Bgm == null) {
                 _scene2Bgm = new Dictionary<string, AudioClip>()
                 {
-                    { "S4_GameDriving", bgms[0] },
                     { "Test_Main_menu", bgms[1] },
                     { "S10_Dialog5", bgms[2] },
                 };
