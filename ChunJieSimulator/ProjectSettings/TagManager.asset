@@ -47,3 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: interactive
+    uniqueID: 3663739817
+    locked: 0
+  - name: "\u70ED\u6C34"
+    uniqueID: 2356916395
+    locked: 0
