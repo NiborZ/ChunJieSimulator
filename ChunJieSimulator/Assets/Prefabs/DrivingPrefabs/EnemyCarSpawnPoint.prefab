@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5391584150605497896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5391584150605497899}
+  - component: {fileID: 5391584150605497898}
+  m_Layer: 0
+  m_Name: EnemyCarSpawnPoint
+  m_TagString: CarSpawingPoint
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5391584150605497899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5391584150605497896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.78, y: 8, z: -0.42766836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5391584150605497898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5391584150605497896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2de3dfe3288b49d69d309e75022377b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCarList:
+  - {fileID: 2989516930210451399, guid: b4ee87c0c88274b988bdf35059e6d704, type: 3}
+  - {fileID: 261915913780055167, guid: 4cc8b6266685d452fa0d62da7c4d4f9c, type: 3}
+  - {fileID: 4564633599618417423, guid: 379869fd847bc4330802cee062c4192e, type: 3}
+  - {fileID: 9099235787673486876, guid: d558d4a3f2d564b6488dd0bd45b1fa33, type: 3}
+  - {fileID: 7740146529473630757, guid: 82fcbad2f128540c0b6c635ff84aab82, type: 3}
+  - {fileID: 4253008102718006909, guid: 4eaf9d16b7a754fedb506550fcefb984, type: 3}
