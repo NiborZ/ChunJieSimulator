@@ -44,7 +44,7 @@ public class DialogController : MonoBehaviour
     GameObject CreateDialogMask(string dialog) {
         var mask = Instantiate<GameObject>(Resources.Load<GameObject>("btn_mask"), transform);
         mask.tag = "Dialog";
-        mask.transform.Find("text").GetComponent<Text>().text = dialog;
+        mask.transform.GetComponentInChildren<Text>().text = dialog;
         mask.GetComponent<Button>().onClick.RemoveAllListeners();
         mask.GetComponent<Button>().onClick.AddListener(()=> {
             if (currentDialog) {

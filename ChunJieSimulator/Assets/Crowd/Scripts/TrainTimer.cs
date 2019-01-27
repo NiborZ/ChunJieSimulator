@@ -27,6 +27,7 @@ public class TrainTimer : MonoBehaviour
 
     public void OnTimeOut() {
         Debug.Log("Time Out");
+
     }
 
     public void Stop() {

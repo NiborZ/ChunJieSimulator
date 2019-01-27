@@ -121,11 +121,17 @@ public class UITicket : MonoBehaviour
         }
     }
 
+    public void OnClickSuccess() {
+        LevelManager.Instance.loadNextScene();
+    }
+    public void OnClickShutdown() {
+        LevelManager.Instance.restart();
+    }
+
     /// <summary>
     /// 牛哥我又来见您了
     /// </summary>
     public void YellowCow() {
-
     }
 
 }

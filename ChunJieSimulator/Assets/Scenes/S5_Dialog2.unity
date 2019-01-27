@@ -493,7 +493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text1: {fileID: 0}
-  levelManager: {fileID: 0}
   player: {fileID: 6394796734871315047, guid: 92557565ebf2d4278ac66ff525b92cec, type: 3}
   dialog1: {fileID: 330402419397240046, guid: a121400fa628049a2b2aa95e678c1e69, type: 3}
   dialog1Obj: {fileID: 0}
