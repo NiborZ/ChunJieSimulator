@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private AudioManager _Instance;
-    public AudioManager Instance {
+    private static AudioManager _Instance;
+    public static AudioManager Instance {
         get {
             if (_Instance == null) {
                 GameObject go = Instantiate<GameObject>(Resources.Load<GameObject>("AudioManager"));

@@ -22,6 +22,9 @@ public class DrivingController : MonoBehaviour
     private float playTimeCounter = 0f;
     private GameObject spawnedCarObj = null;
     public int usedSpawner;
+    public AudioClip boomClip;
+    public AudioClip engineClip;
+
 
     void Start()
     {
@@ -49,6 +52,7 @@ public class DrivingController : MonoBehaviour
     {
         enemyMoveForward();
         StartCoroutine(adjustRoadSpeed());
+        AudioManager.Instance.PlayEffect(boomClip);
     }
 
     private void enemyMoveForward()
