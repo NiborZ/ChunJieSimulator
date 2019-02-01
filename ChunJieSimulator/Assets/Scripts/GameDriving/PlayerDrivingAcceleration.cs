@@ -34,8 +34,7 @@ public class PlayerDrivingAcceleration : MonoBehaviour
 
     public void controlPlayerAcceleration()
     {
-
-        if(Input.GetKey(KeyCode.Space) && enableMove)
+        if(enableMove)
         {
             accelerateAmount += Time.deltaTime * speedFast;
             aMovement.Set(0f, accelerateAmount, 0f);
@@ -68,7 +67,7 @@ public class PlayerDrivingAcceleration : MonoBehaviour
             speedometerRigidbody.angularVelocity = 0f;
             speedometerRigidbody.gravityScale = 0f;
             enableMove = false;
-            drivingController.playerLoseHealth();
+            //drivingController.playerLoseHealth();
         }
         else if (zoneTag == "RedZone" && drivingController.playerCarStopped)
         {

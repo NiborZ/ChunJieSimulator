@@ -63,7 +63,6 @@ public class DrivingController : MonoBehaviour
                 car.GetComponent<EnemyDrivingMovement>().inverseDirection();
         }
     }
-
     public void driving()
     {
         if(playTimeCounter >= playTime)

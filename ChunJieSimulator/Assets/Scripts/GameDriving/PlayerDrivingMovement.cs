@@ -27,7 +27,16 @@ public class PlayerDrivingMovement : MonoBehaviour
 
     public void controlPlayerMovement()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        //horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (Input.touchCount > 0) {
+            if (Input.GetTouch(0).position.x < Screen.width / 2) {
+                horizontalInput = -1;
+            } else {
+                horizontalInput = 1;
+            }
+        } else {
+            horizontalInput = 0;
+        }
         //verticalInput = Input.GetAxisRaw("Vertical");
         pMoveXAmount = pMoveXSpeed * horizontalInput;
         //pMoveYAmount = pMoveYSpeed * verticalInput;
